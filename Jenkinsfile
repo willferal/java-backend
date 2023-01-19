@@ -6,7 +6,7 @@ pipeline{
         stage('Deploy Backend'){
             steps{
                 sh 'echo deploy backend'
-                git credentialsId: 'repository account', url: 'https://github.com/willferal/java-aplication-jenkins'
+                git credentialsId: 'github-account', url: 'https://github.com/willferal/java-backend'
                 sh 'mvn clean package'
                 sh 'echo $PWD'
                 deploy adapters: [tomcat8(credentialsId: 'tomcat', path: '', url: 'http://localhost:8001/')], contextPath: 'tasks-backend', war: 'target/tasks-backend.war'
