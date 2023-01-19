@@ -15,12 +15,11 @@ pipeline{
         
         
         
-        /*stage('Deploy prod'){
+        stage('Deploy prod'){
             steps{
                 sh 'docker-compose build'
                 sh 'docker-compose up -d'
             }
         }
-        */
     }
 }
