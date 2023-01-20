@@ -15,7 +15,7 @@ pipeline{
         
         stage('Deploy prod'){
             steps{
-                sh 'ifconfig'
+                sh './script.sh'
                 //sh 'docker compose up -d'
             }
         }
