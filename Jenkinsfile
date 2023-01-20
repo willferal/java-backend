@@ -26,7 +26,7 @@ pipeline{
         
         stage('Deploy prod'){
             steps{
-                user 1000:1000
+                user: 1000:1000
                 sh 'docker compose ps'
                 //sh 'docker compose up -d'
             }
