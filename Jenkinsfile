@@ -17,7 +17,7 @@ pipeline{
             steps{
                 sh'''
                     curl --version
-                    jq --version
+                    sudo apt install jq
                 '''
             }
         }
