@@ -15,7 +15,6 @@ pipeline{
         
         stage('Deploy prod'){
             steps{
-                sh 'rmdir lero'
                 sh 'docker compose build'
                 //sh 'docker compose up -d'
             }
