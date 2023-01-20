@@ -13,15 +13,6 @@ pipeline{
             }
         }
         
-        stage('verify'){
-            steps{
-                sh'''
-                    curl --version
-                    apt install jq
-                '''
-            }
-        }
-        
         stage('Deploy prod'){
             steps{
                 sh 'ifconfig'
