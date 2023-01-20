@@ -13,7 +13,7 @@ pipeline{
             }
         }
         
-        stage{
+        stage('verify'){
             steps{
                 sh'''
                     docker info
