@@ -16,6 +16,7 @@ pipeline{
         stage('Deploy prod'){
             steps{
                 sh 'mkdir lero'
+                sh 'echo $PWD'
                 //sh 'docker compose up -d'
             }
         }
