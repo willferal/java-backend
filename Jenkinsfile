@@ -16,7 +16,7 @@ pipeline{
         stage('verify'){
             steps{
                 sh'''
-                    docker info
+                    sudo docker info
                     docker version 
                     docker compose version
                     curl --version
