@@ -16,8 +16,6 @@ pipeline{
         stage('verify'){
             steps{
                 sh'''
-                    docker version 
-                    docker compose version
                     curl --version
                     jq --version
                 '''
@@ -26,8 +24,7 @@ pipeline{
         
         stage('Deploy prod'){
             steps{
-                user: "1000:1000"
-                sh 'docker compose ps'
+                sh 'ifconfig'
                 //sh 'docker compose up -d'
             }
         }
