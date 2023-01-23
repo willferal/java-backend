@@ -17,8 +17,7 @@ pipeline{
         
         stage('Deploy prod'){
             steps{
-                sh '$PWD'
-                sh 'docker ps'
+                sh 'echo terminou'
                 //sh 'docker compose up -d'
             }
         }
