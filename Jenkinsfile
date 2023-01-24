@@ -1,7 +1,9 @@
 pipeline{
     agent any
     
-    
+    environment {
+    PATH = "$PATH:/usr/local/bin"
+    } 
     
     stages{
         stage('Deploy Backend'){
@@ -18,7 +20,7 @@ pipeline{
         
         stage('Deploy prod'){
             steps{
-                withEnv["PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin"]
+                // withEnv["PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin"]
                 // sh '/usr/bin/docker --version'
                 sh 'docker compose ps' 
                 // sh 'docker compose up -d'
