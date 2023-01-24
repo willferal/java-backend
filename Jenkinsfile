@@ -19,7 +19,8 @@ pipeline{
             steps{
                 // withEnv["PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin"]
                 // sh '/usr/bin/docker --version'
-                sh 'docker run hello-world' 
+                sh 'docker run hello-world'
+                sh 'docker-compose ps'
                 // sh 'docker compose up -d'
             }
         }
