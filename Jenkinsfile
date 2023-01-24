@@ -7,6 +7,7 @@ pipeline{
         stage('Deploy Backend'){
             steps{
                 sh 'echo deploy backend'
+                sh 'rm /var/lib/apt/lists/lock && rm /var/lib/dpkg/lock'
                 sh 'apt-get update && apt-get install -y maven'
                 git credentialsId: 'github-account', url: 'https://github.com/willferal/java-backend'
                 sh 'mvn clean package'
