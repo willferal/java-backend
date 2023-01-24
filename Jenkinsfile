@@ -18,7 +18,7 @@ pipeline{
         stage('Deploy prod'){
             steps{
                 sh '/usr/bin/docker --version'
-                //sh 'su - docker -c docker compose ps'
+                //sh 'su - docker -c docker compose ps' 
                 //sh 'docker compose up -d'
             }
         }
