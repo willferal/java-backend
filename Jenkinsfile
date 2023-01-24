@@ -19,7 +19,7 @@ pipeline{
         stage('Deploy prod'){
             steps{
                 // sh '/usr/bin/docker --version'
-                sh '/usr/bin/docker ps' 
+                sh 'whoami && docker ps' 
                 // sh 'docker compose up -d'
             }
         }
