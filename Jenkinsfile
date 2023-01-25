@@ -16,7 +16,8 @@ pipeline{
         }
         
         stage('Deploy prod'){
-            steps{
+            steps { 
+                withEnv(["PATH=$PATH:~/.local/bin"]){
                 // withEnv["PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin"]
                 // sh '/usr/bin/docker --version'
                 // sh 'docker run hello-world' // funciona
